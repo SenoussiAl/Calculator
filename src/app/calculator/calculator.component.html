@@ -1,1 +1,44 @@
-<p>calculator works!</p>
+
+<table>
+  <tr>
+    <td>
+      <label for="nbr1">Premier nombre:</label>
+    </td>
+    <td>
+    <input name="nbr1" id="nbr1" value="{{nbr1Value | number: '1.0-2'}}" #nbr1>
+    </td>
+  </tr>
+  <tr>
+  <td>
+    <label for="nbr2">Deuxieme nombre:</label>
+  </td>
+  <td>
+    <input name="nbr2" id="nbr2" value="{{nbr2Value | number: '1.0-2'}}" #nbr2>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="result">Resultat:</label>
+    </td>
+    <td>
+      <input name="result" id="result" value="{{resultValue | number: '1.0-2'}}" #result>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button (click)="add(nbr1.value, nbr2.value)">+</button>
+    </td>
+    <td>
+      <button (click)="sub(nbr1.value, nbr2.value)">-</button>
+    </td>
+    <td>
+      <button (click)="mul(nbr1.value, nbr2.value)">x</button>
+    </td>
+    <td>
+      <button (click)="div(nbr1.value, nbr2.value)">/</button>
+    </td>
+    <td>
+      <button (click)="clear()">clear</button>
+    </td>
+    </tr>
+  </table>
